@@ -1,0 +1,36 @@
+
+.fullscreen-menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    background: #2e3336;
+    overflow: hidden;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+
+    &--active {
+        visibility: visible;
+    }
+
+   
+}
+
+
+.fullscreen-menu__close{
+    position: fixed;
+    right: rem(31px);
+    top: rem(23px);
+
+
+}
+
+.close {
+         fill: #fff;
+         width: rem(20px); 
+         height: rem(20px);       
+}

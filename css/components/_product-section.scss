@@ -1,0 +1,283 @@
+.product-section {
+    background-color: #F8FAF9;
+    position: relative;
+
+    &::before {
+        content:  url("../img/bigLeaf.png");
+        position: absolute;
+        right: 0;
+        bottom: -20%;
+    }  
+}
+
+.product-slider {
+    position: relative;
+
+    .bx-wrapper {
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+.product__item {
+    padding-left: rem(50px);
+
+    background: url("../img/green-leafs.png") left center / 50% auto no-repeat;
+
+    @include tablets {
+        background: url("../img/green-leafs.png")  center top 25% / 53% auto no-repeat;
+    }
+
+    @include phones {
+        background: url("../img/green-leafs.png")  center top 20% / 80% auto no-repeat;
+    }
+}
+
+.product__container {
+    display: flex;
+    overflow: hidden;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.product__logo {
+       width: 100%;
+
+    @include tablets {
+        width: rem(340px);
+    }
+}
+
+.product__col {
+    flex: 1;
+    margin-right: rem(70px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {
+        margin-right: 0;
+    }
+}
+
+.product__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+    text-transform: uppercase;
+    color: #292929;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    @include tablets {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 20px;
+        line-height: 36px;
+    }
+    
+}
+
+.product__ingredients {
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.product__text {
+    margin-bottom: 50px;
+
+    @include tablets {
+        padding: 0 14%;
+        text-align: center;
+        margin-bottom: rem(10px);
+    }
+
+    @include phones {
+        padding: 0 7%;
+    }
+}
+
+.product-slider__arrow {
+    background: url("../img/arrow.svg") center center no-repeat;
+    background-size: contain;
+    display: block;
+    width: rem(13px);
+    height: rem(28px);
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 10;
+
+&-left {
+    right: 0;
+    
+ }
+
+&-right {
+    left: 0;
+    transform: rotate(-180deg);
+ }
+
+}
+
+
+
+.specifications__container {
+    display: flex;
+    margin-bottom: rem(20px);
+
+    @include tablets {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.specifications__calorie {
+    margin-right: rem(45px);
+}
+
+.specifications__value {
+    font-weight: bold;
+    color: #000000;
+}
+
+.cost {
+    display: flex;
+
+    @include tablets {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.cost__cost {
+    font-size: rem(60px);
+    margin-right: rem(20px);
+    line-height: rem(60px);
+    color: #151515;
+}
+
+
+///_products-menu__section
+
+.products-menu__section {
+    background: url("../img/bg.png") center center/cover no-repeat;
+    position: relative;
+    color: #fff;
+
+    &:before {
+        content: url("../img/oneBerry.png");
+        position: absolute;
+        top: -50px;
+        left: 20px;
+    }
+
+    &-title {
+        position: absolute;
+        left: 80px;
+        top: 100px;
+        color: #fff;
+    }
+}
+
+.products-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.products-menu__item {
+    display: flex; 
+
+   /* @include phones {
+        &.active {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 10;
+        }
+    }*/
+}
+
+.products-menu__title {
+    position: relative ;
+    width: 98px;
+    height: 100%;
+
+    @include phones {
+        width: 80px;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgda(0, 0, 0, 0.4);
+    }
+
+}
+
+.products-menu__content {
+    background: rgba(51, 53, 55, 0.9);
+    width: 0;
+    position: relative;
+    overflow: hidden;
+    transition: width .7s; 
+}
+        
+
+
+.products-menu__container {
+    padding: 40px 73px 45px 26px;
+}
+
+.products-menu__close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.products-menu__image {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.products-menu__text {
+    position: absolute;
+    width: 466px;
+    height: 58px;
+    bottom: 240px;
+    right: -180px;
+    transform: rotate(-90deg);
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+
+
+
+
+

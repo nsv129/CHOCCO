@@ -1,0 +1,25 @@
+.socials {
+    display: inline-flex;
+}
+
+.socials__item{
+   
+    margin-right: rem(21px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+
+
+.social {
+    width: rem(20px); 
+    height: rem(20px);
+    fill: #B3B3B3;
+
+    &:hover {
+        fill: #292929;
+    }
+}
+ 

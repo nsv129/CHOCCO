@@ -1,0 +1,59 @@
+.menu {
+    padding: 0 rem(30px);
+    padding-top: rem(5px);
+    
+
+    @include tablets {
+       display: none;
+    }
+}
+
+.menu__list  {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: center;
+
+   @include tablets {
+      display: block;
+         }
+}
+
+.menu__item {
+   margin-right: rem(25px);
+
+   @include tablets {
+      margin-right: 0;
+   }
+
+   &:hover {
+      text-decoration: underline;
+   }
+ 
+
+   &:last-child {
+       margin-right: 0;
+   }
+}
+
+.menu__link {
+   text-decoration: none;
+   justify-content: space-between;
+   font-size: rem(18px);
+   white-space: nowrap;
+
+   @include tablets {
+      font-size: 36px;
+      line-height: 72px;
+   }
+}
+
+.menu__vertical {
+   text-align: center;
+   color: #FFF;
+   margin: 150px 0;
+   
+   @include tablets {
+      display: block;
+   }
+}

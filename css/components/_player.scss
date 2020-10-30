@@ -1,0 +1,176 @@
+.player-section {
+    background: url("../img/greenLeafs.png") center top 60% / auto no-repeat;
+    background-color: #F8FAF9;
+    position: relative;
+    
+    &:before {
+        content: url("../img/blackberry.png");
+        position: absolute;
+        right: 0;
+        bottom: -15%;
+        z-index: 10;
+    }
+
+    @include tablets {
+        background: url("../img/greenLeafs.png") center top 58% / 102% no-repeat;
+    }
+}
+
+.player {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    &.active .player__splash {
+        display: none;
+    }
+
+    &.paused {
+        .player__start {
+            width: 14px;
+            height: 22px;
+            
+            &:after,
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 5px;
+                top: 7px;
+                bottom: 0;
+                background: #626262;
+                height: 19px;  
+            }
+
+            &:after {
+                right: 93%;
+
+                @include tablets {
+                    right: 95%;
+                }
+                @include phones {
+                    right: 93%;
+                }
+            }
+
+            &:before {
+                left: 5%;
+
+                @include tablets {
+                    left: 3%;
+                }
+            }
+        }
+    }
+}
+
+.player-section__container {
+    height: 405px;
+    width: 660px;
+    margin: 0 auto;
+
+    @include tablets {
+        height: 350px;
+        width: 595px;
+    }
+
+    @include phones {
+        height: 230px;
+        width: 390px;
+    }
+}
+
+.player__splash {
+    position: absolute;
+    background: url("../img/Play-white.png") center/cover no-repeat;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+}
+
+.player__controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    background: #3e3e3e;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 25px;
+
+    @include tablets {
+        padding: 4px 5px;
+    }
+}
+
+.player__start {
+    background: #3e3e3e;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding-bottom: 6px;
+
+    &.paused {
+        display: none;
+    }
+}
+
+.player__playback {
+    height: 16px;
+    width: 445px;
+    position: relative;
+
+    &:before {
+        content: "";
+        height: 4px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        background: #626262;
+        display: block;
+        transform: translateY(50%);
+    }
+
+    @include phones {
+        width: 260px;
+    }
+}
+
+.player__playback-button {
+    position: absolute;
+    background: #626262;
+    border-radius: 50px;
+    border: none;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    top: 40%;
+    left: 0;
+    cursor: pointer;
+  
+}
+
+#yt-player {
+
+    @include tablets {
+        height: 350px;
+        width: 595px;
+    }
+
+    @include phones {
+        height: 230px;
+        width: 390px;
+    }
+}
+
+.player__duration {
+    @include phones {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

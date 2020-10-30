@@ -1,0 +1,95 @@
+.team-section__title {
+    margin-bottom: 100px;
+}
+
+.team {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-version--desktop {
+        position: absolute;
+        top: 50%;
+        //top: 100%;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.team-version--mobile {
+    display: none;
+
+    @include tablets {
+        //position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        //margin-top: 30px;
+        //left: 200px;
+    }  
+}
+
+.team__member {
+    margin-bottom: rem(20px);   
+}
+
+.team__title {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    color: #292929;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(21px);
+    font-weight: bold;
+    margin-bottom: rem(20px);
+    outline: transparent;
+
+    &:after {
+        content: url(../img/Polygon.png);
+        transition: .3s;
+        margin-left: rem(4px);        
+    }
+
+    &.up:after {
+        transform: rotate(180deg);
+    }
+
+    &.up {
+        outline: transparent;
+        background: yellow;
+    }
+}
+
+.team__item {
+    flex: 1;
+    text-align: center;
+    margin-right: rem(20px);
+    max-width: 14rem;
+    position: relative;
+
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.team__content {
+    overflow: hidden;
+    height: 0;
+    transition: .3s;
+}
+
+.team__occ {
+    color: #292929;
+}
+
+.team__content-text {
+    color: #666666;
+}
+
+

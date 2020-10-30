@@ -1,0 +1,23 @@
+.order-section {
+    background:
+    //url("../img/blackberry.png") right 0 top -10% no-repeat,
+    url("../img/blueberry.png") left 2% bottom 10% no-repeat, 
+    url("../img/green-leaf.png") right 1% bottom 10% no-repeat,
+    url("../img/pattern.png") center center/cover no-repeat;
+    position: relative;
+    
+
+    @include tablets {
+      background: none;
+      background: url("../img/pattern.png") center center/cover no-repeat;;
+  }
+
+  
+     @media screen and (min-widht: $tablets) {
+      background: url("../img/green-leaf.png") right 1% bottom 10% no-repeat,
+                  url("../img/blueberry.png") left 2% bottom 10% no-repeat;
+
+               
+  }
+    
+}

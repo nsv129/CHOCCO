@@ -1,0 +1,115 @@
+.benefits-section {
+    position: relative;
+    background: url("../img/leaf.png") left  no-repeat;
+
+    @include tablets {
+        background-position: left top 13%;
+    }
+
+    @include phones {
+        background: none;
+    }
+
+    &:before {
+        content: url("../img/raspberries.png");
+        position: absolute;
+        bottom: rem(-80px);
+        left: 0;
+        z-index: 10;
+
+        @include phones {
+            display: none;
+        }
+    }
+}
+
+//_benefits 
+
+.benefits {
+    display: flex;
+
+    @include phones {
+        flex-direction: column;
+    }
+   }
+
+.benefits__item {
+    flex: 1;
+    margin: 0 3%;
+    position: relative;
+
+    &::before {
+        content: url("../img/shape.png");
+        position: absolute;
+        bottom: 69%;
+        transform: translateX(rem(130px));
+
+        @include tablets {
+            display: none;
+        }
+    }
+
+        &:last-child {
+            margin-right: 0;
+    
+            &:before {
+                display: none;
+            }
+        }
+
+        @include phones {
+            margin: 0;
+            margin-bottom: 10%;
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+    
+            &:first-child {
+                margin-left: 0;
+            }       
+        }
+    }
+
+    //_benefit 
+
+    .benefit {
+        text-align: center;
+    
+        @include phones {
+            display: flex;
+            text-align: left;
+        }
+    }
+    
+    .benefit__image {
+    
+        @include phones {
+            margin-right: rem(26px);
+        }
+    }
+    
+    .benefit__image-wrapper {
+        display: inline-block;
+        width: rem(126px);
+        height: rem(126px);
+        position: relative;
+        background: #F2F5F4;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    
+    .benefit__icon {
+        width: rem(64px);
+        height: rem(68px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate( -50%, -50%);
+    }
+    
+    .benefit__title {
+        font-size: rem(27px);
+        font-weight: bold;
+        color: #292929;
+    }
